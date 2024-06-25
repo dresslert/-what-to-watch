@@ -1,5 +1,5 @@
 # Usa a imagem oficial do Node.js como base
-FROM node:16
+FROM node:20
 
 # Define o diretório de trabalho dentro do contêiner
 WORKDIR /usr/src/app
@@ -11,7 +11,7 @@ RUN npm install -g @vue/cli
 #COPY package*.json ./
 
 # Instala as dependências do projeto
-RUN npm install
+#RUN npm install
 
 # Copia o restante do código fonte para o diretório de trabalho
 COPY . .

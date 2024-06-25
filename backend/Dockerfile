@@ -1,5 +1,5 @@
 # Usar uma imagem oficial do Node.js
-FROM node:16
+FROM node:20
 
 # Criar e definir o diretório de trabalho no container
 WORKDIR /usr/src/app
@@ -9,7 +9,7 @@ RUN npm install -g nodemon
 
 # Instalar as dependências do projeto
 #COPY package*.json ./
-RUN npm install
+#RUN npm install
 
 # Copiar o restante do código do aplicativo (a ser criado posteriormente)
 COPY . .
